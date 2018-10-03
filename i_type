@@ -1,0 +1,8 @@
+x Bltz j jal beq bnq blez bgtz
+addi addiu slti sltiu andi ori xori lui
+TLB FlPt x x x x x x 
+x x x x x x x x
+lb lh lwl lw lbu lhu lwr x
+sb sh swl sw x x swr x
+ll lwcl x x x x x x
+sc swcl x x x x x x

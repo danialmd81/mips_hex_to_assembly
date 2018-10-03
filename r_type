@@ -1,0 +1,8 @@
+sll x srl sra sllv x srlv srav
+jr jalr x x syscall break x x
+mfhi mthi mflo mtlo x x x x
+mult multu div divu x x x x
+add addu sub subu and or xor nor
+x x slt sltu x x x x
+x x x x x x x x
+x x x x x x x x 
