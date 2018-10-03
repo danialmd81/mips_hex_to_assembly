@@ -1,11 +1,11 @@
 # mips_hex_to_assembly
 A c++ program to convert 32-bit hex code into MIPS instruction.
 
-Please refer to the book [Computer Organization and Design](https://www.amazon.com/Computer-Organization-Design-MIPS-Architecture/dp/0124077269)p.191 for the decoding table.
+Please refer to the book [Computer Organization and Design](https://www.amazon.com/Computer-Organization-Design-MIPS-Architecture/dp/0124077269) p.191 for the decoding table.
 
 The program requires 2 arguments as the input/output file name.
 
-File 'i_type', 'r_type' and 'registers' are where the name of the instructions and registers written in. The program will read and build a the table mentioned above out of them.
+File '`i_type`', '`r_type`' and '`registers`' are where the name of the instructions and registers written in. The program will read and build the table mentioned above out of them.
 
 ## Using the program
 ```
