@@ -70,7 +70,7 @@ void registers_build()
 void read_op(int ins, FILE *out) 
 {
     int op = (ins >> 26);
-    int rs, rt, rd, shamt, funct, imm;
+    int rs, rt, rd, shamt, funct, imm, jump_address;
 
     // cout << "opcode: " << bitset<6>(op) << endl;
     if(op == 0) {
@@ -113,6 +113,7 @@ void read_op(int ins, FILE *out)
         rs = (ins >> 21) & 31;
         rt = (ins >> 16) & 31;
         imm = ins & 65535;
+        jump_address = ins & 67108863;
 
         // f3 (first_3_bit) l3 (last_3_bit)
         // f3 == 0 l3 == 2,3 jump(adr) 
@@ -127,7 +128,7 @@ void read_op(int ins, FILE *out)
         if(first_3_bit == 0) {
             if(last_3_bit == 2 || last_3_bit == 3) {
                 // jump instruction
-                fprintf(out, "%d\n", imm);
+                fprintf(out, "%d\n", jump_address);
             } else if(last_3_bit == 4 || last_3_bit == 5) {
                 // branch instruction
                 fprintf(out, "%s, ", registers[rs]);
