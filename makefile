@@ -1,6 +1,10 @@
 CONVERTER:
-	g++ -o converter converter.cpp
+	g++ -o converter converter.cpp -Wall
 clean:
-	rm converter out.txt
+	rm converter *.txt
 test:
-	./converter sample_input.txt out.txt
+	./converter sample1 out.txt
+test2:
+	./converter sample2 out.txt 
+debug:
+	./converter sample2 out.txt > debug_out.txt
